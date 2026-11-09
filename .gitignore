@@ -1,0 +1,76 @@
+# =============================================================================
+# E-Commerce Customer & Revenue Intelligence Analytics
+# Git Ignore Configuration
+# =============================================================================
+
+# Large Database Files (GitHub enforces a 100 MB hard limit; olist_analytics.db is ~128 MB)
+# Re-generate locally via: python notebooks/01_data_cleaning.py
+*.db
+*.sqlite
+*.sqlite3
+dataset/cleaned/*.db
+dataset/cleaned/*.sqlite
+
+# Large Unused Raw Files (Kaggle Geolocation file is 58 MB; exceeds GitHub recommendation & unused)
+dataset/olist_geolocation_dataset.csv
+
+# Private Local Interview Preparation & Study Notes (Kept local, excluded from public repo)
+local_interview_prep/
+.local_prep/
+
+# Python Bytecode, Caches & Compilation
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.matplotlib/
+/tmp/matplotlib_cache/
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# IDEs & Code Editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Operating System Files (macOS & Windows)
+.DS_Store
+.DS_Store?
+._*
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Environment Variables & Sensitive Credentials
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.cert
+*credential*.json
+*secret*.json
+
+# Distribution / Packaging / Temporary Files
+build/
+dist/
+*.egg-info/
+*.egg
+*.tmp
+~$*
